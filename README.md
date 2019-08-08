@@ -1,4 +1,4 @@
-# grpc
+# docker-grpc
 
 [![Docker Repository on Quay](https://quay.io/repository/hyper/grpc/status "Docker Repository on Quay")](https://quay.io/repository/hyper/grpc)
 [![License](https://img.shields.io/github/license/hyperjiang/docker-grpc.svg)](https://github.com/hyperjiang/docker-grpc)
