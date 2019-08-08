@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:buster as builder
 
 ENV GRPC_VER v1.22.0
 ENV GRPC_SRC /var/local/grpc
@@ -19,3 +19,5 @@ RUN echo "--- downloading grpc source code ---" && \
 	echo "--- installing grpc ---" && \
 	cd ${GRPC_SRC} && \
 	CFLAGS="-Wno-cast-function-type" make -j$(nproc) && make install && make clean && ldconfig
+
+RUN rm -rf ${GRPC_SRC}
