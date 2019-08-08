@@ -2,7 +2,6 @@ FROM debian:buster
 
 ENV GRPC_VER v1.22.0
 ENV GRPC_SRC /var/local/grpc
-ENV CXXFLAGS="-Wno-tautological-compare -Wno-class-memaccess -Wno-ignored-qualifiers"
 
 RUN apt-get update && apt-get install -y \
 	build-essential autoconf git pkg-config \
@@ -20,4 +19,4 @@ RUN	echo "--- installing protobuf ---" && \
 
 RUN	echo "--- installing grpc ---" && \
 	cd ${GRPC_SRC} && \
-	make -j$(nproc) && make install && make clean && ldconfig
+	CFLAGS="-Wno-cast-function-type" make -j$(nproc) && make install && make clean && ldconfig
