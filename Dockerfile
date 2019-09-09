@@ -1,4 +1,4 @@
-FROM golang:1.12 as builder
+FROM golang:1.13 as builder
 
 ENV GRPC_VER v1.23.0
 ENV GRPC_SRC /var/local/grpc
