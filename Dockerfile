@@ -1,6 +1,6 @@
 FROM golang:1.13 as builder
 
-ENV GRPC_VER v1.23.0
+ENV GRPC_VER v1.25.0
 ENV GRPC_SRC /var/local/grpc
 
 RUN apt-get update && apt-get install -y \

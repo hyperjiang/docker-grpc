@@ -13,5 +13,6 @@ docker pull quay.io/hyper/grpc
 
 Current available tags:
 
-- lastest, 1.23.0
+- lastest, 1.25.0
+- 1.23.0
 - 1.22.0
